@@ -1,0 +1,18 @@
+.circle {
+  --var-medida: 550px;
+  width: var(--var-medida);
+  height: var(--var-medida);
+  border: none;
+  border-radius: 50%;
+  z-index: 10;
+  top: -29%;
+  left: -2rem;
+  position: absolute;
+  background-color: rgb(88, 197, 197);
+}
+
+.circle:nth-child(2){
+  background-color: rgb(188, 240, 240);
+  --var-medida: calc(590px);
+  z-index: 5;
+}

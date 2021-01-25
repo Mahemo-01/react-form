@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  height: 100vh;
+  background-color: var(--light-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.darkMode {
+  --var-medida: calc(26px);
+  width: calc(var(--var-medida) * 2.25);
+  height: var(--var-medida);
+  border-radius: var(--var-medida);
+  background-color: var(--dark-color);
+  -webkit-box-shadow: var(--default-shadow);
+          box-shadow: var(--default-shadow);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.darkMode::after {
+  content: '';
+  display: block;
+  --var-medida: 26px;
+  --var-new-medida: calc(var(--var-medida) - 6px);
+  width: var(--var-new-medida);
+  height: var(--var-new-medida);
+  border-radius: var(--var-new-medida);
+  background-color: var(--card-color);
+  position: absolute;
+  top: calc((var(--var-medida) - var(--var-new-medida)) / 2);
+  left: calc((var(--var-medida) - var(--var-new-medida)) / 2);
+  right: unset;
+}
+
+.darkMode.active {
+  background-color: #f0f3f5;
+}
+
+.darkMode.active::after {
+  left: unset;
+  right: calc((var(--var-medida) - var(--var-new-medida)) / 2);
+  background-color: #343a40;
 }

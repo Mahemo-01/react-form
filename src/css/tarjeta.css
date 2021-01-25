@@ -1,0 +1,13 @@
+.card {
+  background-color: var(--card-color);
+  -webkit-box-shadow: var(--default-shadow);
+          box-shadow: var(--default-shadow);
+  padding: 10px;
+}
+
+.card {
+  position: relative;
+  height: 500px;
+  width: 250px;
+  overflow: hidden;
+}

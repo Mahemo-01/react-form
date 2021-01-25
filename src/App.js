@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import { useState } from 'react'
+
+import Card from "./componentes/tarjeta";
+import Circulo from './componentes/circulo'
+import Formulario from "./componentes/formulario";
+import RuedaColor from "./componentes/rueda-color";
 import './App.css';
+import './globals.css';
+
 
 function App() {
+
+  const [contador, setValue] = useState(0)
+  const [nombre, setNombre] = useState('sin Nombre')
+
+  function sumarUno() {
+    setValue(contador + 1)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Card>
+        <Circulo />
+        <Circulo />
+        <p>You clicked {contador} veces</p>
+        <button className='btn-blue' onClick={sumarUno}>
+          Click me
+      </button>
+        <button className='btn-blue' onClick={() => setNombre("angel hernandez")}>
+          {nombre}
+        </button>
+        <Formulario />
+        <RuedaColor />
+      </Card>
+    </>
+  )
 }
 
 export default App;

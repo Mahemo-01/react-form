@@ -1,0 +1,34 @@
+
+.btn-white, .btn-blue {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 8px 20px;
+}
+
+.btn-white:hover, .btn-blue:hover {
+  cursor: pointer;
+  -webkit-box-shadow: var(--btn-shadow);
+          box-shadow: var(--btn-shadow);
+}
+
+.btn-white:active, .btn-blue:active {
+  -webkit-box-shadow: var(--btn-shadow) inset;
+          box-shadow: var(--btn-shadow) inset;
+}
+
+.btn-white {
+  background-color: var(--card-color);
+}
+
+.btn-blue {
+  background-color: var(--blue-color);
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+}
+
+.btn-white {
+  text-align: center;
+  width: 100%;
+  font-size: 15px;
+  border-radius: 50px;
+}
