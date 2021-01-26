@@ -4,11 +4,13 @@
   --light-color:    #f0f3f5;
   --white-color:    #ffffff;
   --dark-color:     #343a40;
+  --gray-color:     #eceaea;
+  --grey-color:     #e7ebf0;
   --yellow-color:   #ffc107;
   --orange-color:   #ff7f07;
   --red-color:      #dc3848;
   --pink-color:     #f78074;
-  --purplue-color:  #383ecc;
+  --purple-color:  #383ecc;
   --blue-color:     #007bff;
   --card-color:     #ffffff;
   --default-shadow: 0 3px 6px rgba(0,0,0,0.2);

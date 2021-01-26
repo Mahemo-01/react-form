@@ -3,27 +3,26 @@
   --light-color:    #2b343a;
   --dark-color:     #f0f3f5;
   --card-color:     #2f3338;
+  --gray-color:     #474747;
 }
 
 
 /* boton */
 .darkMode {
-  --var-medida: calc(26px);
-  width: calc(var(--var-medida) * 2.25);
+  --var-medida: .8rem;
+  width: calc(var(--var-medida) * 2);
   height: var(--var-medida);
   border-radius: var(--var-medida);
   background-color: var(--dark-color);
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  position: relative;
   cursor: pointer;
 }
 
 .darkMode::after {
   content: '';
   display: block;
-  --var-medida: 26px;
-  --var-new-medida: calc(var(--var-medida) - 6px);
+  --var-medida: .8rem;
+  --var-new-medida: calc(var(--var-medida) - (var(--var-medida) / 4)) ;
   width: var(--var-new-medida);
   height: var(--var-new-medida);
   border-radius: var(--var-new-medida);

@@ -1,0 +1,38 @@
+.box-settings{
+  --var-medida: 50px;
+  width: calc(var(--var-medida));
+  height: calc(var(--var-medida));
+  background-color: var(--red-color);
+  position: absolute; 
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  /* overflow: hidden; */
+}
+
+.menu{
+  background-color: var(--gray-color);
+  color: var(--dark-color);
+  --var-medida: 200px;
+  width: calc(var(--var-medida));
+  height: calc(var(--var-medida) * 1.5);
+  border-radius: calc(var(--var-medida) / 20);
+  border: 1px solid rgb(179, 179, 179);
+  position: absolute;
+  top: 55px;
+  right: 0px;
+  z-index: 100;
+  transform: translateY(150px);
+  /* opacity: 0; */
+  font-size: .8rem;
+}
+
+.menu li{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}

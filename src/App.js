@@ -3,6 +3,7 @@ import Circulo from './componentes/circulo'
 import Formulario from "./componentes/formulario";
 import RuedaColor from "./componentes/rueda-color";
 import Switch from './componentes/switch';
+import MenuSettings from "./componentes/menu-settings";
 import './App.css';
 import './globals.css';
 
@@ -11,7 +12,7 @@ function App() {
 
   return (
     <>
-      <Switch/>
+      <MenuSettings />
       <Card>
         <Circulo />
         <Circulo />
