@@ -1,19 +1,35 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '../css/switch.css'
 
-function Switch () {
+function Switch() {
 
-  const [enabled, setEnabled] = useState(false)
+  const mql = window.matchMedia('(prefers-color-scheme: dark)');
+  const [enabled, setEnabled] = useState(mql.matches ? true : false)
   const classActive = enabled ? 'active' : 'inactive'
 
-  function handleChange () {
+  mql.addEventListener("change", (e) => {
+    if (e.matches) {
+      document.body.classList.add('is-dark-mode')
+      setEnabled(true)
+    }
+    else {
+      document.body.classList.remove('is-dark-mode')
+      setEnabled(false)
+    }
+  })
+
+  useEffect(() => {
+    if (mql.matches) { document.body.classList.add('is-dark-mode') }
+  }, [])
+
+  function handleChange() {
     setEnabled(!enabled)
     document.body.classList.toggle("is-dark-mode")
   }
 
   return (
     <div className={`darkMode ${classActive}`} id="darkMode" onClick={handleChange}
-      ></div>
+    ></div>
   )
 }
 
