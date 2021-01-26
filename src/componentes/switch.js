@@ -1,10 +1,10 @@
-
 import { useState } from 'react'
+import '../css/switch.css'
 
 function Switch () {
 
   const [enabled, setEnabled] = useState(false)
-  const classActive = enabled ? 'darkMode' : 'darkMode active'
+  const classActive = enabled ? 'active' : 'inactive'
 
   function handleChange () {
     setEnabled(!enabled)
@@ -12,7 +12,7 @@ function Switch () {
   }
 
   return (
-    <div className={classActive} id="darkMode" onClick={handleChange}
+    <div className={`darkMode ${classActive}`} id="darkMode" onClick={handleChange}
       ></div>
   )
 }

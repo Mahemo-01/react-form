@@ -6,20 +6,18 @@ function RuedaColor () {
   const [gradiente, setGradient] = useState(() => localStorage.getItem('localGradient'))
   const [gradienteDos, setGradientTwo] = useState(() => localStorage.getItem('localGradientTwo'))
 
-  console.log('gradiente:', gradiente)
-  console.log('gradiente dos:', gradienteDos)
 
   useEffect(() => {
-
     const gradientWheel = document.querySelector('#gradient-wheel')
-    // localStorage.getItem('localGradient')
-    console.log('pasando por useEfecct')
+    const grdOne = 'linear-gradient(rgb(247, 128, 116) 0%, rgb(56, 62, 204) 140%)'
+    const grdTwo = 'linear-gradient(rgb(247, 128, 116) 0%, rgb(106, 112, 254) 120%)'
+
     if (gradiente=== null) {
-      localStorage.setItem('localGradient','linear-gradient(rgb(247, 128, 116) 0%, rgb(56, 62, 204) 140%)')
+      localStorage.setItem('localGradient', grdOne)
     }
 
     if (gradienteDos===null) {
-      localStorage.setItem('localGradientTwo', 'linear-gradient(rgb(247, 128, 116) 0%, rgb(106, 112, 254) 120%)')
+      localStorage.setItem('localGradientTwo', grdTwo)
     }
 
     gradientWheel.style.background = localStorage.getItem('localGradient')
@@ -76,6 +74,9 @@ function RuedaColor () {
   //   }
   // }
 
+  function handleClick () {
+    console.log('le hicimos click')
+  }
   // function gradientClicked(e) {
   //   let optionStyle = window.getComputedStyle(gradientWheel);
   //   let gradientBg = optionStyle.getPropertyValue('background-image');
@@ -113,7 +114,7 @@ function RuedaColor () {
   //   document.querySelector('.gradient-options').remove()
   // }
   return (
-    <div className="gradient-wheel" id="gradient-wheel"></div>
+    <div className="gradient-wheel" id="gradient-wheel" onClick={handleClick}></div>
   )
 }
 
