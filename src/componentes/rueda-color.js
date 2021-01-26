@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import '../css/rueda-color.css'
 
-function RuedaColor () {
+function RuedaColor() {
 
   const [gradiente, setGradient] = useState(() => localStorage.getItem('localGradient'))
   const [gradienteDos, setGradientTwo] = useState(() => localStorage.getItem('localGradientTwo'))
@@ -12,16 +12,12 @@ function RuedaColor () {
     const grdOne = 'linear-gradient(rgb(247, 128, 116) 0%, rgb(56, 62, 204) 140%)'
     const grdTwo = 'linear-gradient(rgb(247, 128, 116) 0%, rgb(106, 112, 254) 120%)'
 
-    if (gradiente=== null) {
+    if (gradiente === null && gradienteDos === null) {
       localStorage.setItem('localGradient', grdOne)
-    }
-
-    if (gradienteDos===null) {
       localStorage.setItem('localGradientTwo', grdTwo)
     }
 
     gradientWheel.style.background = localStorage.getItem('localGradient')
-
   }, [])
 
 
@@ -74,7 +70,7 @@ function RuedaColor () {
   //   }
   // }
 
-  function handleClick () {
+  function handleClick() {
     console.log('le hicimos click')
   }
   // function gradientClicked(e) {

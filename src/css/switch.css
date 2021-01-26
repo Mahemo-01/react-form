@@ -1,18 +1,18 @@
+/* body */
 .is-dark-mode {
   --light-color:    #2b343a;
+  --dark-color:     #f0f3f5;
   --card-color:     #2f3338;
-  --white-color:    #f0f3f5;
 }
 
 
+/* boton */
 .darkMode {
   --var-medida: calc(26px);
   width: calc(var(--var-medida) * 2.25);
   height: var(--var-medida);
   border-radius: var(--var-medida);
   background-color: var(--dark-color);
-  -webkit-box-shadow: var(--default-shadow);
-          box-shadow: var(--default-shadow);
   position: absolute;
   top: 10px;
   right: 10px;
@@ -27,21 +27,14 @@
   width: var(--var-new-medida);
   height: var(--var-new-medida);
   border-radius: var(--var-new-medida);
-  background-color: var(--card-color);
+  background-color: var(--light-color);
   position: absolute;
   top: calc((var(--var-medida) - var(--var-new-medida)) / 2);
   left: calc((var(--var-medida) - var(--var-new-medida)) / 2);
   right: unset;
 }
 
-.darkMode.active {
-  background-color: #f0f3f5;
-}
-
 .darkMode.active::after {
   left: unset;
   right: calc((var(--var-medida) - var(--var-new-medida)) / 2);
-  background-color: #343a40;
 }
-
-
