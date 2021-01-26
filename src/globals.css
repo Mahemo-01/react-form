@@ -22,7 +22,11 @@
 .is-dark-mode {
   --light-color:    #2b343a;
   --card-color:     #2f3338;
-  --white-color:    #1a1b1d;
+  --white-color:    #f0f3f5;
+}
+
+.is-dark-Mode.visible {
+  background-color: #1a1b1d;;
 }
 
 * {

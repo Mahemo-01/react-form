@@ -1,6 +1,32 @@
+import { useEffect, useState } from 'react'
 import '../css/rueda-color.css'
 
-function RuedaColor() {
+function RuedaColor () {
+
+  const [gradiente, setGradient] = useState(() => localStorage.getItem('localGradient'))
+  const [gradienteDos, setGradientTwo] = useState(() => localStorage.getItem('localGradientTwo'))
+
+  console.log('gradiente:', gradiente)
+  console.log('gradiente dos:', gradienteDos)
+
+  useEffect(() => {
+
+    const gradientWheel = document.querySelector('#gradient-wheel')
+    // localStorage.getItem('localGradient')
+    console.log('pasando por useEfecct')
+    if (gradiente=== null) {
+      localStorage.setItem('localGradient','linear-gradient(rgb(247, 128, 116) 0%, rgb(56, 62, 204) 140%)')
+    }
+
+    if (gradienteDos===null) {
+      localStorage.setItem('localGradientTwo', 'linear-gradient(rgb(247, 128, 116) 0%, rgb(106, 112, 254) 120%)')
+    }
+
+    gradientWheel.style.background = localStorage.getItem('localGradient')
+
+  }, [])
+
+
   // let gradients = ['linear-gradient(rgb(208, 15, 36) 0%, rgb(56, 62, 204) 140%)', 'linear-gradient(rgb(47, 216, 86) 0%, rgb(56, 62, 204) 140%)', 'linear-gradient(rgb(7, 255, 201) 0%, rgb(40, 44, 156) 140%)', 'linear-gradient(rgb(247, 128, 116) 0%, rgb(56, 62, 204) 140%)']
 
   // function bodyloaded() {
