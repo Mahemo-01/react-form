@@ -1,28 +1,29 @@
 
+import { useState } from 'react'
 import '../css/menu-settings.css'
-import Boton from './boton'
 import ListOption from './list-option'
-import Switch from './switch'
+
 
 function MenuSettings() {
   const settingName = 'Dark Mode'
+  const [closeWindow, setCloseWindow] = useState(true)
+
 
   const handleClick = (e) => {
-    const sibling = e.target.parentNode.nextElementSibling.style
-    sibling.opacity = '1'
-    sibling.transform = 'translateY(0px)'
-    sibling.transition = '.5s ease-in'
+    setCloseWindow(!closeWindow)
   }
 
+  const classCloseWindow = closeWindow ? 'inactive' : 'active'
 
   return (
-    <div className='box-settings'>
+    <div className={`box-settings ${classCloseWindow}`}>
       <span onClick={handleClick}><i className="fas fa-cog"></i></span>
-      <ul className='menu p-1'>
+      <ul className={`menu p-1 ${classCloseWindow}`} >
         <ListOption settingName={settingName} />
-        <li>Configuration</li>
+        <ListOption settingName={settingName} />
+        <ListOption settingName={settingName} />
       </ul>
-    </div>
+    </div >
   )
 }
 

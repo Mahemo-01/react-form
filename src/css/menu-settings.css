@@ -10,7 +10,15 @@
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+  transition: 3s ease;
 }
+
+/* .box-settings.active{
+  transform: rotate(90deg);
+}
+.box-settings.inactive{
+ transform: rotate(0deg);
+} */
 
 .menu{
   background-color: var(--gray-color);
@@ -24,9 +32,21 @@
   top: 55px;
   right: 0px;
   z-index: 100;
-  transform: translateY(150px);
-  opacity: 0;
   font-size: .8rem;
+  overflow: scroll;
+  opacity: 0;
+  transform: translateY(150px);
+  transition: .5s ease-in;
+}
+
+.menu.active{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.menu.inactive{
+  opacity: 0;
+  transform: translateY(150px);
 }
 
 .menu li{

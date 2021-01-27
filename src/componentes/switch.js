@@ -20,7 +20,7 @@ function Switch() {
 
   useEffect(() => {
     if (mql.matches) { document.body.classList.add('is-dark-mode') }
-  }, [])
+  }, [mql.matches])
 
   function handleChange(e) {
     setEnabled(!enabled)
