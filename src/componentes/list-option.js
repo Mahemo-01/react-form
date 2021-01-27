@@ -1,10 +1,15 @@
 import Switch from "./switch";
 
-function ListOption() {
+function ListOption({ settingName }) {
+
+  const handleClick = (e) => {
+    e.target.parentNode.parentNode.style.transition = 'none'
+  }
+
   return (
-    <li>
-      <span>Dark-Mode</span>
-      <Switch />
+    <li onClick={handleClick}>
+      <span>{settingName}</span>
+      <Switch></Switch>
     </li>
   )
 }

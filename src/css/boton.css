@@ -18,6 +18,7 @@
 
 .btn-white {
   background-color: var(--card-color);
+  color: var(--dark-color);
 }
 
 .btn-blue {

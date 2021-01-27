@@ -22,7 +22,7 @@ function Switch() {
     if (mql.matches) { document.body.classList.add('is-dark-mode') }
   }, [])
 
-  function handleChange() {
+  function handleChange(e) {
     setEnabled(!enabled)
     document.body.classList.toggle("is-dark-mode")
   }

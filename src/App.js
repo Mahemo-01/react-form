@@ -7,7 +7,6 @@ import MenuSettings from "./componentes/menu-settings";
 import './App.css';
 import './globals.css';
 
-
 function App() {
 
   return (
