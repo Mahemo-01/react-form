@@ -5,7 +5,7 @@ import '../css/header.css'
 
 const Header = ({ title }) => {
 
-   const [showMenuSettings, setShowMenuSettings] = useState(false)
+  const [showMenuSettings, setShowMenuSettings] = useState(false)
 
   const onClick = () => {
     setShowMenuSettings(!showMenuSettings)
@@ -15,7 +15,7 @@ const Header = ({ title }) => {
     <div className='contenedor'>
       <h4>{title}</h4>
       <Icon color='#25677b' onClick={onClick}/>
-      {showMenuSettings && <MenuSettings />}
+      {showMenuSettings && <MenuSettings showMenu={showMenuSettings} />}
     </div>
   )
 }

@@ -1,8 +1,12 @@
 .contenedor{
-  background-color: yellow;
   color: var(--gray-color);
-  width: 400px;
+  position: absolute;
   display: flex;
-  gap:20px;
-  margin-top: 0;
+  width: 100%;
+  padding: 15px;
+  top: 0;
+  left: 0;
+  flex-direction: row;
+  justify-content: space-between;
 }
+

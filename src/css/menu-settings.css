@@ -29,14 +29,14 @@
   border-radius: calc(var(--var-medida) / 30);
   border: 1px solid var(--border-color);
   position: absolute;
-  top: 25px;
+  top: 35px;
   right: 0px;
   z-index: 100;
   font-size: .8rem;
   /* overflow: scroll; */
   /* opacity: 0; */
   /* transform: translateY(150px); */
-  transition: 3s ease-in;
+  transition: .5s ease-in;
 }
 
 .menu.active{

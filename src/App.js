@@ -19,7 +19,7 @@ function App () {
 
   return (
     <>
-      <Header title={'Hello Mundo'}/>
+      <Header title={'hola'}/>
     </>
   )
 }
