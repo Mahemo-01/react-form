@@ -34,8 +34,8 @@
   z-index: 100;
   font-size: .8rem;
   /* overflow: scroll; */
-  /* opacity: 0; */
-  /* transform: translateY(150px); */
+  opacity: 0;
+  transform: translateY(150px);
   transition: .5s ease-in;
 }
 

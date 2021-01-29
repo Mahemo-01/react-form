@@ -2,13 +2,12 @@ import ListOption from './list-option'
 import '../css/menu-settings.css'
 
 
-function MenuSettings({showMenuSettings}) {
+function MenuSettings ({ showMenu }) {
   const text = 'Dark Mode setting'
-  const claseActiva=showMenuSettings ? 'inactive':'active'
-
+  const claseActiva=showMenu ? 'inactive':'active'
 
   return (
-    <div className={`menu ${claseActiva}`}>
+    <div className={`menu p-1 ${claseActiva}`}>
       <ul>
         <ListOption settingName={text} />
         <ListOption settingName={text} />
