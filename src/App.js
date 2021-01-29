@@ -2,7 +2,9 @@ import Header from './componentes/header'
 import './App.css';
 import './globals.css';
 
-function App() {
+
+function App () {
+
 
   return (
     <>

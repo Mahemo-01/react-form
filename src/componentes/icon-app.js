@@ -1,6 +1,7 @@
-const Icon = ({color}) => {
+const Icon = ({ color, onClick }) => {
+
   return (
-    <span style={{ color: color }}><i className="fas fa-cog"></i></span>
+    <span onClick={onClick} style={{ color: color }}><i className="fas fa-cog"></i></span>
   )
 }
 
