@@ -1,25 +1,3 @@
-.box-settings{
-  --var-medida: 20px;
-  width: calc(var(--var-medida));
-  height: calc(var(--var-medida));
-  color: var(--black-color);
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  transition: 3s ease;
-}
-
-/* .box-settings.active{
-  transform: rotate(90deg);
-}
-.box-settings.inactive{
- transform: rotate(0deg);
-} */
-
 .menu{
   background-color: var(--bg-menu-color);
   color: var(--fg-menu-color);
@@ -29,8 +7,8 @@
   border-radius: calc(var(--var-medida) / 30);
   border: 1px solid var(--border-color);
   position: absolute;
-  top: 35px;
-  right: 0px;
+  top: 100%;
+  right: 12px;
   z-index: 100;
   font-size: .8rem;
   /* overflow: scroll; */
@@ -44,10 +22,6 @@
   transform: translateY(0px);
 }
 
-.menu.inactive{
-  opacity: 0;
-  transform: translateY(150px);
-}
 
 .menu li{
   display: flex;

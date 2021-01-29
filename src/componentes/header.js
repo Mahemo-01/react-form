@@ -5,7 +5,7 @@ import '../css/header.css'
 
 const Header = ({ title }) => {
 
-  const [showMenuSettings, setShowMenuSettings] = useState(true)
+  const [showMenuSettings, setShowMenuSettings] = useState(false)
 
   const onClick = () => {
     setShowMenuSettings(!showMenuSettings)

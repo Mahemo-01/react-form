@@ -4,7 +4,7 @@ import '../css/menu-settings.css'
 
 function MenuSettings ({ showMenu }) {
   const text = 'Dark Mode setting'
-  const claseActiva=showMenu ? 'inactive':'active'
+  const claseActiva=showMenu ? 'active' : null
 
   return (
     <div className={`menu p-1 ${claseActiva}`}>

@@ -1,9 +1,10 @@
 .contenedor{
+  /* border: 1px solid red; */
   color: var(--gray-color);
   position: absolute;
   display: flex;
   width: 100%;
-  padding: 15px;
+  padding: 12px;
   top: 0;
   left: 0;
   flex-direction: row;
