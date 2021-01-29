@@ -7,16 +7,16 @@ import ListOption from './list-option'
 function MenuSettings() {
   const settingName = 'Dark Mode'
   const [closeWindow, setCloseWindow] = useState(true)
+  const classCloseWindow = closeWindow ? 'inactive' : 'active'
 
 
   const handleClick = (e) => {
     setCloseWindow(!closeWindow)
   }
 
-  const classCloseWindow = closeWindow ? 'inactive' : 'active'
 
   return (
-    <div className={`box-settings ${classCloseWindow}`}>
+    <div className={`box-settings ${classCloseWindow}`} title='Settings'>
       <span onClick={handleClick}><i className="fas fa-cog"></i></span>
       <ul className={`menu p-1 ${classCloseWindow}`} >
         <ListOption settingName={settingName} />

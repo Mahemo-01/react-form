@@ -1,15 +1,15 @@
 .box-settings{
-  --var-medida: 50px;
+  --var-medida: 20px;
   width: calc(var(--var-medida));
   height: calc(var(--var-medida));
   color: var(--black-color);
-  position: absolute; 
+  position: absolute;
   top: 10px;
   right: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
   transition: 3s ease;
 }
 
@@ -21,19 +21,19 @@
 } */
 
 .menu{
-  background-color: var(--gray-color);
-  color: var(--dark-color);
+  background-color: var(--bg-menu-color);
+  color: var(--fg-menu-color);
   --var-medida: 200px;
   width: calc(var(--var-medida));
   height: calc(var(--var-medida) * 1.5);
-  border-radius: calc(var(--var-medida) / 20);
-  border: 1px solid rgb(179, 179, 179);
+  border-radius: calc(var(--var-medida) / 30);
+  border: 1px solid var(--border-color);
   position: absolute;
   top: 55px;
   right: 0px;
   z-index: 100;
   font-size: .8rem;
-  overflow: scroll;
+  /* overflow: scroll; */
   opacity: 0;
   transform: translateY(150px);
   transition: .5s ease-in;

@@ -2,21 +2,64 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
 
 :root {
-  --light-color:    #f0f3f5;
+  --light-color:    #f3f4f5;
   --white-color:    #ffffff;
-  --dark-color:     #343a40;
-  --black-color:    #a8aaac;
-  --gray-color:     #eceaea;
-  --grey-color:     #e7ebf0;
+  --dark-color:     #242728;
+  --black-color:    #8c8e8f;
+  --gray-color:     #808080;
+  --grey-color:     #c6cace;
   --yellow-color:   #ffc107;
   --orange-color:   #ff7f07;
   --red-color:      #dc3848;
   --pink-color:     #f78074;
   --purple-color:  #383ecc;
   --blue-color:     #007bff;
+  --metal-color: #575f62;
   --card-color:     #ffffff;
+  --border-color:   #cecfd0;
+  --light-grey-color: #dbe2e2;
   --default-shadow: 0 3px 6px rgba(0,0,0,0.2);
   --btn-shadow:     0 3px 4px rgba(0,0,0,0.6);
+
+  --bg-color: var(--white-color);
+  --fg-color: var(--blue-color);
+
+  --bg-menu-color: var(--gray-color);
+  --fg-menu-color: var(--light-color);
+}
+
+
+body {
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+
+.is-dark-mode {
+  --bg-color: var(--dark-color);
+  --fg-color: var(--white-color);
+  --bg-menu-color: var(--metal-color);
+  --fg-menu-color: var(--grey-color);
+  --light-color:    #636768;
+  --card-color:     #2f3338;
+  --gray-color:     #474747;
+  --black-color:    #7f8b96;
+  --border-color:   #515254;
+  --light-grey-color: #434545;
 }
 
 * {
@@ -340,7 +383,7 @@ input:-webkit-autofill:active {
 }
 
 p{
-  color: white;
+  color: var(--fg-color);
   position: relative;
   z-index: 50;
 }
