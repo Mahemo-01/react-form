@@ -14,7 +14,7 @@ function App () {
 
    useEffect(() => {
     if (mql.matches) { document.body.classList.add(classActive) }
-  }, [mql.matches])
+  }, [])
 
 
   return (

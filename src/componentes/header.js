@@ -16,7 +16,6 @@ const Header = ({ title }) => {
       <h4>{title}</h4>
       <Icon color='#25677b' onClick={onClick}/>
       <MenuSettings showMenu={showMenuSettings} />
-      {/* {showMenuSettings && <MenuSettings showMenu={showMenuSettings} />} */}
     </div>
   )
 }
